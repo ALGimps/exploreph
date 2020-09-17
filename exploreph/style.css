@@ -1,0 +1,89 @@
+body{
+    margin:0;
+}
+
+.wrapper{
+    height:100vh;
+    display: block;
+    overflow: hidden;
+}
+
+.banner{
+    display: flex;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.banner-item{
+    position: relative;
+    min-width: 100%;
+}
+
+.banner-image{
+    z-index: -1;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.banner-header1{
+    font-family: Open Sans Condensed;
+    font-weight: 300;
+    font-size: 4vh;
+    color: #FDFBFF;
+}
+.banner-header2{
+    left: 100px;
+    font-family: Open Sans Condensed;
+    font-weight: 700;
+    font-size: 12vh;
+    color: #FDFBFF;
+    max-width: 550px;
+    line-height: 1;
+}
+.banner-header{
+    top: 15vh;
+    left: 3vw;
+    position: absolute;
+    z-index: 1;
+    display: inline-block;
+    margin: 0;
+    vertical-align:top;
+}
+.nav{
+    display: flex;
+    max-width: 680px;
+    overflow-x: overlay;
+    top: 60vh;
+    right: 0;
+    position: fixed;
+    padding-bottom: 25px;
+    z-index: 2;
+}
+
+.nav-image{
+
+    width: 11vw;
+    margin-right: 15px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.58);
+    white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 7px;
+    
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.25);
+    opacity: 25%;
+}
+ 
+::-webkit-scrollbar-thumb {
+
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background-color: gainsboro;
+}
