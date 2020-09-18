@@ -22,9 +22,11 @@ body{
 }
 
 .banner-image{
+    height: auto;
     z-index: -1;
     object-fit: cover;
     max-width: 100%;
+    min-height: 100vh;
     user-select: none;
 }
 
@@ -80,14 +82,14 @@ body{
     user-select: none;
 }
 
-.button-explore:hover{
+.button:hover{
     background-color: rgba(0,0,0,0.6);
 }
 
 .nav{
     display: flex;
     max-width: 600px;
-    overflow-x: overlay;
+    overflow: overlay;
     top: 55vh;
     right: 0;
     position: absolute;
@@ -95,16 +97,47 @@ body{
     z-index: 2;
 }
 
-.nav-image{
+.nav-image-container{
     width: 10vw;
     margin-right: 15px;
     border-radius: 15px;
+    overflow: hidden;
     box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.58);
-    white-space: nowrap;
 }
 
-.additional-info{
+.nav-image{
+    width: 100%;
+    white-space: nowrap;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    user-select: none;
+}
+
+.nav-image:hover{
+    transform: scale(1.05);
+}
+
+.info-container{
     height: 100vh;
+    margin: 20vh 10vw;
+}
+
+.info-row{
+    display: flex;
+}
+
+.info-column{
+    flex: 50%;
+}
+
+.info-column img{
+    max-width: 75%;
+}
+
+.info-column p{
+    font-size: 16px;
+    font-family: open sans;
+    margin-top: 50px;
 }
 
 .noselect{
@@ -114,18 +147,21 @@ body{
 ::-webkit-scrollbar {
     width: 12px;
     height: 7px;
-    
 }
  
+.nav:hover::-webkit-scrollbar{
+    height: 12px;
+}
+
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(125, 125, 125, 0.3);
     opacity: 25%;
 }
  
 ::-webkit-scrollbar-thumb {
 
     box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-    background-color: gainsboro;
+    background-color: rgb(189, 189, 189);
 }
